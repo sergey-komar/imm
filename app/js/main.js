@@ -56,6 +56,35 @@ $(function () {
 
 
 window.addEventListener('DOMContentLoaded', () => {
+
+      //MENU
+      const menu = document.querySelector('.menu');
+      const mobile = document.querySelector('.nav-icon');
+
+      if(mobile){
+        mobile.addEventListener('click', function(){
+          this.classList.toggle('nav-icon--active');
+          menu.classList.toggle('nav--active');
+
+      });
+      }
+
+  
+      const navLinks = document.querySelectorAll('.menu__list a');
+
+      if(navLinks){
+        navLinks.forEach(function (item) {
+         
+          item.addEventListener('click', function () {
+            mobile.classList.remove('nav-icon--active');  
+            menu.classList.remove('nav--active'); 
+          
+          });
+        });
+      }
+
+
+
     const header = document.querySelector('.header__wrapper');
     if (header) {
        window.addEventListener("scroll", () => {
@@ -115,7 +144,25 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
      
-      
+      const btn = document.querySelector('.btnUp');
+
+        btn.addEventListener('click', ()=>{
+        window.scrollTo({
+            top: 0, 
+            behavior: 'smooth' 
+
+            });
+        });
+        function up() {
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 690){
+            btn.classList.add('btnUp-visible');
+            }else{
+            btn.classList.remove('btnUp-visible');
+            }
+        })
+        }
+        up();
         
   
 

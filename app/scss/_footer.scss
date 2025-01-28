@@ -17,5 +17,26 @@
     align-items: center;
     gap: 25px;
 }
-.footer-box__social-link {
-}
+
+/* КНОПКА НА ВВЕРХ */
+.btnUp{
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    line-height: 45px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    opacity: 0;
+    font-size: 20px;
+    transition: opacity .5s;
+    pointer-events: none;
+  }
+  
+  .btnUp-visible{
+    opacity: 1;
+    pointer-events: auto;
+  }
