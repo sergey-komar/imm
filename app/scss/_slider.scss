@@ -1,0 +1,45 @@
+//PARTNERS
+.partners{
+    padding: 10rem 0;
+}
+.partners-slider .slick-prev,
+.partners-slider .slick-next {
+    padding: 0;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+.partners-slider .slick-prev{
+    background: url('../images/slider-arrows-left.svg') no-repeat;
+    left: 0;
+}
+.partners-slider .slick-next{
+    background: url('../images/slider-arrows-right.svg') no-repeat;
+    right: 0;
+}
+
+.partners-slider__img img{
+    margin: 0 auto;
+}
+
+.header-heading__inner .slick-dots li button{
+    padding: 0;
+    font-size: 0;
+    border: none;
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.slick-dots {
+    display: flex;
+    gap: 10px;
+}
+.header-heading__inner .slick-dots li.slick-active button{
+    background-color: #679AFF;
+}
